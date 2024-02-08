@@ -1,0 +1,32 @@
+\graphicspath{{Images/}}
+
+\section{Breaking Classical Cryptography} \label{shor_grover}
+Just as quantum communication and cryptography developed to utilize quantum computers for better communication and security, the offensive side of computer security was able to take advantage of the unique properties of quantum computers to perform better as well\footnote{Defensive cryptography typically refers to systems, protocols, and schemes used to protect sensitive information from outside forces while the term offensive security is typically used to refer to cryptographic systems, protocols, and schemes that attack, break, or take advantage of weaknesses in systems to gain access to valuable and sensitive information. Though it may sound like one is a good thing and one is a bad thing, both work together and are equally important to make sure the systems that protect information grow with the industry that surround them.}. Two algorithms that exemplify this growth and how it can cause a domino effect on the industry and the world by extension are \textbf{\gls{shor}} and \textbf{\gls{grover}}.
+
+    \subsection{Shor's Algorithm}
+    Shor's algorithm was made by Peter Shor in 1994. Inspired by Dan Simon's research discussing an oracle function\footnote{a "black box" function that when given an input gives an output; the implementation of how such a task might be done may not be known, but such a concept is often in proofs to provide abstract concepts not yet realized that may allow other discoveries} capable of finding a period\footnote{a point at which a cyclical group repeats\label{period}} as well as taking advantage of the observation that Fourier transformations\footnote{a function capable of decomposing a waveform; implementation not relevant to this discussion} are good at find periodicity, Shor was able to devise an algorithm capable of breaking the discrete log problem and later developed this algorithm further to accomplish prime factorization with a super-polynomial speedup (when compared with classical algorithms; previously mentioned in Section \ref{q_rev}) \cite{shor}. 
+    
+    \subsection{Grover's Algorithm}
+    Grover's algorithm was made by Lov Grover in 1996. It is a search algorithm designed for use on unstructured datasets. Given a black box that produces a unique output, Grover's algorithm can find the unique input that produced this output with high probability. If the function's domain size is $N$, Grover's algorithm can find such an input with only $O(\sqrt{N})$ evaluations.
+
+    \subsection{Why does this matter?}
+    As previously discussed, Shor's algorithm can be used to break many if not nearly all public-key cryptography systems. This includes:
+    \begin{itemize}
+        \item the Diffie-Hellman key exchange
+        \item ElGamal public-key encryption
+        \item the Digital Signature Algorithm (\textbf{\gls{dsa}})
+        \item Elliptic Curve Cryptography (\textbf{\gls{ecc}} which includes Elliptic Curve Diffie-Hellman)
+        \item the Rivest-Shamir-Adleman (\textbf{\gls{rsa}}) encryption protocol
+    \end{itemize}
+
+    While Grover's algorithm could:
+    \begin{itemize}
+        \item optimize \textbf{\glspl{bruteforceattack}}
+        \item find collisions in hash-based systems, acting as a precursor for \textbf{\gls{preimageattack}}
+    \end{itemize}
+
+    Currently Grover's algorithm has several restrictions that limit its implementation and use. One of these is that it is designed for use on unstructured datasets. The second is that it only provides a quadratic search speedup rather than, for example, an exponential one. When applied to structured datasets or smaller datasets, this algorithm may actually be less efficient or slower than other schemes such as the parallel rho algorithm\footnote{used to solve the elliptic curve discrete log problem } \cite{gill_ecc}\cite{grover_no_adv}.
+
+    Neither algorithm has a quantum computer in existence able to run them with a low enough margin of error to be useful.
+
+    As you can see quantum computing, communication, and cryptography are growing on both the defensive and offensive side, and we know that Mosca's theorem put together with current predictions for when a cryptographically-relevant quantum computer could be expected tells us that now is as good a time as any to start preparing and strengthening current systems for its arrival. 

@@ -1,0 +1,70 @@
+\ProvidesPackage{EngReport}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Backend %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Formatting %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{anyfontsize}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{titling}
+\usepackage{geometry}      
+\usepackage{setspace}
+\usepackage[bibstyle=reading, backend=biber]{biblatex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graphics %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+% \usepackage{float}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{wrapfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% URLs %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xurl}
+\usepackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Math & Symbols %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{gensymb}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Side Comment %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{xcolor}
+\usepackage{marginnote}
+\usepackage[textwidth=2cm]{todonotes}
+\setlength{\marginparwidth}{2cm}
+\newcounter{mycomment}
+\definecolor{Red}{rgb}{1,0,0}
+\definecolor{Green}{HTML}{5cb85c}
+\definecolor{Blue}{rgb}{0,0.5,.75}
+
+\newcommand{\redcomm}[1]{
+    \stepcounter{mycomment} 
+    \todo[prepend, caption={\textbf{\arabic{mycomment} - R}}, size=\tiny, linecolor=Red, bordercolor=Red, backgroundcolor=Red!10]{#1}
+}
+
+\newcommand{\greencomm}[1]{
+    \stepcounter{mycomment} 
+    \todo[prepend, caption={\textbf{\arabic{mycomment} - G}}, size=\tiny, linecolor=Green, bordercolor=Green, backgroundcolor=Green!10]{#1}
+}
+
+\newcommand{\bluecomm}[1]{
+    \stepcounter{mycomment} 
+    \todo[prepend, caption={\textbf{\arabic{mycomment} - B}}, size=\tiny, linecolor=Blue, bordercolor=Blue, backgroundcolor=Blue!10]{#1}
+}

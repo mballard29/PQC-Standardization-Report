@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage{EngReport}
+\usepackage[acronym,nomain]{glossaries}
+
+\graphicspath{{Images/}}
+% \bibliography{Sources.bib}
+\microtypesetup{protrusion=false}
+\addbibresource{Sources.bib}
+\nocite{*}
+\makeglossaries
+% \onehalfspacing
+\setstretch{1.15}
+\geometry{letterpaper, portrait, includeheadfoot=true, hmargin=1in, vmargin=1in}
+
+% \fontsize{font size}{vertsize (usually 1.2x)}\selectfont
+\fontsize{11}{20}\selectfont{}
+\captionsetup{font=footnotesize}
+
+\begin{document}
+\renewcommand{\familydefault}{\rmdefault}
+
+\input{0_titlepage}
+\input{headerfooter}
+
+\section*{Summary}
+Information is everywhere. It is nearly a currency in our day in age. It covers the frivolous as well as the national critical, and quantum computers have the power to break the systems that currently secure it. In this paper we will discuss the background of quantum computers, the theories on which current work in the field is based, and the current and most recent developments in the field. At the end, we hope you will have a solid foundation and background to join this new ``quantum movement", following the continued updates and discoveries as they come out. 
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\input{1 introduction}
+\input{2 topic 1}
+\input{2 topic 2}
+\input{2 topic 3}
+\input{2 topic 4}
+\input{2 topic 5}
+\input{3 conclusion}
+\pagebreak\pagebreak
+
+\fontsize{9}{12}\selectfont{}
+\singlespacing
+\input{5 appendix}
+\pagebreak
+\printbibliography
+\end{document}
