@@ -1,0 +1,23 @@
+\graphicspath{{Images/}}
+
+\section{Collaborating for Public Reform} \label{government}
+In 2015, the \gls{nsa}'s Information Assurance Directorate (IAD) announced that they would ``initiate a transition to quantum resistant algorithms in the not too distant future" \cite{moody_lets_2018}. Ditching their current initiative at the time called Suite B, they stated that they would be searching for ``cost-effective security against a potential quantum computer" \cite{2022_nsa}. Stating that it must be cost-effective indicated that this new solution must be compatible with a wide variety of systems already in use. It is also one of the reasons that the NSA recommended pursuing research and searching for solutions in Post-Quantum Cryptography (\gls{pqc}) rather than Quantum Key Distribution \gls{qkd} systems\footnote{post-quantum cryptography is cryptography not weakened or completely broken by Shor or Grover's algorithm while being suitable for a wide range of applications; quantum key distribution in comparison is best for point-to-point communication \cite{ee_web}}.  
+
+This is the announcement that inspired \gls{nist} to kick off their Post-Quantum Cryptography Standardization Competition which we will discuss in the next section.
+
+The original plan was that the NSA would work to secure the National Security Systems (\gls{nss}) since they fell under the NSA's domain of responsibilities while NIST would work toward standardizing protocols and schemes that could be used and recommended to other government organizations and broader industry. However, because President Biden's January 2022 National Security Memorandum (\textbf{\gls{nsm}}-8) gave the NSA 180 days to ``identify instances of encryption used on NSS not in compliance with NSA-approved quantum resistant algorithms, as well as provide a plan and timeline to transition those systems to quantum resistant standards" \cite{2022_nsa}, this plan had to pivot to accommodate this shortened timeline. 
+
+As a result NIST continued to pursue their PQC Standardization Competition, while the NSA joined forces with DHS to find an intermediary solution as well as draft and disseminate a plan that could be recommended to FCEB, SLTT, CI, and some private industry organizations and vendors. 
+
+Fulfilling their part of the deal, DHS's CISA has released multiple white papers\footnote{refers to an information publication made available to the public, i.e. it is not confidential or restricted} that educate, make recommendations, and update industry leaders as well as the public. Recommendations in these papers (specifically ``Preparing Critical Infrastructure for Post-Quantum Cryptography" released in 2022) include things like:
+\begin{itemize}
+    \item creating a "post-quantum readiness roadmap" and encouraging vendors and service providers that work with the organization to do the same
+    \item putting together a project management team to "plan and scope the organization's migration to PQC" , including the organizations "cybersecurity and privacy risk managers who can prioritize assets that would be most impacted by a CRQC and/or would expose the organization to greater risk" 
+    \item developing an inventory of vulnerable and dependent systems with the cooperation of information technology and operational technology procurement experts, engaging with supply chain vendors to identify these technologies (much in the same mentality as developing a Software Bill of Materials (see \textbf{\gls{sbom}} in glossary))
+    \item prioritizing high impact systems, industrial control systems (\textbf{\glspl{ics}}), and systems with long-term confidentiality/secrecy needs
+    \item identifying data reliant on quantum vulnerable technologies, either updating these systems or coming up with plans and/or timelines to phase them out
+    \item engaging with vendors on their roadmap to clarify when and how each commercial-off-the-shelf (\textbf{\gls{cots}}) vendor ``plans to deliver updates or upgrades to enable the use of PQC, as well as the expected cost associated with" such a migration
+    \item engaging with cloud service providers to ``understand the provider's quantum-readiness roadmap" 
+\end{itemize}
+
+This quantum revolution, its increased capabilities as well as its increased threats has encouraged cross collaboration on every level. We have illustrated how the collaboration between the NSA and DHS has enacted change, and next we will discuss the last piece of the puzzle: how NIST is using their PQC Standardization Competition to find algorithms to standardize for use in both the private and public sector.
